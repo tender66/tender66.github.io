@@ -5,11 +5,29 @@
 
 /*----------- HEADER --------------*/
 
-
+header button {
+    display:none;
+}
 
 /*----------- NAVIGATION --------------*/
 
 
+nav ul.hide {
+    display: block;
+}
+
+nav ul li:first-child a {border-left: 1px solid #777;}
+nav ul li:last-child a {border-right: 1px solid #777;}
+nav ul li a{
+
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.3);
+    padding: .8rem 1rem;
+
+}
+nav ul li {
+    float: left;
+    width: 25%;
+  }
 
 /*----------- MAIN --------------*/
 

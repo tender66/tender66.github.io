@@ -1,21 +1,108 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
 
 /*----------- BODY --------------*/
 
-
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
 
 /*----------- HEADER --------------*/
 
+header {
+  padding: .5rem 2%;
+  background-color: $mainColor;
+  font-family: $fontTitle;
+  display:block;
+}
+header h1 {
+    margin: 0; 
+    font-weight: $fontHeavy;
+    float:left;
+  
+  }
+header h2 {
+  margin: 0; 
+  font-weight: $fontLight;
+  float:left;
+  clear: left;
+ 
+}
 
+
+
+header button {
+  margin: .2rem 2%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  float: right;
+}
+
+header button:hover {
+  color: lighten($mainColor, 10%);
+}
 
 /*----------- NAVIGATION --------------*/
 
+nav {
+  background-color: $mainColor;
+}
 
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  background-color: darken($mainColor, 10%);
+  color: #eee;
+  border-top: 1px solid rgba($color: #000000, $alpha: 0.3);
+  padding: .8rem 2%;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+  background-color: lighten($mainColor, 10%);
+  color: #333;
+}
+nav ul li.active a {
+  background-color: darken($mainColor, 20%);
+  color: #fff;
+}
+
+nav ul.hide {display: none;}
 
 /*----------- MAIN --------------*/
-
+main {
+  padding: 0 2%;
+  min-height: 10rem;
+  font-family: $fontTitle;
+  font-weight: $fontNormal;
+}
 
 
 /*----------- FOOTER --------------*/
+
+
+footer {
+  background-color: $mainColor;
+  padding: .5rem 2%;
+  text-align: center;
+}
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
